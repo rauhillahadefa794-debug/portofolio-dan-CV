@@ -1,0 +1,202 @@
+/* ================= GLOBAL ================= */
+body {
+    background: #f5f7fa;
+    scroll-behavior: smooth;
+}
+
+/* ================= NAVBAR ================= */
+.atas{
+    background: linear-gradient(135deg, #1B263B, #536170);
+    color: #dcdcdc;
+    display:flex;
+    justify-content: space-between;
+    padding: 20px 50px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.atas h1 {
+    font-size: 20px;
+    letter-spacing: 1px;
+}
+
+.atas a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    position: relative;
+}
+
+/* hover underline */
+.atas a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    background: #E0E1DD;
+    bottom: -5px;
+    left: 0;
+    transition: 0.3s;
+}
+
+.atas a:hover::after {
+    width: 100%;
+}
+
+/* ================= HERO ================= */
+.tentang {
+    background: linear-gradient(to right, #E0E1DD, #f8f9fa);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 80px;
+    padding: 80px 40px;
+}
+
+/* FOTO */
+.tentang-kiri img {
+    width: 280px;
+    height: 280px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 6px solid #415A77;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.2);
+    transition: 0.3s;
+}
+
+.tentang-kiri img:hover {
+    transform: scale(1.05);
+}
+
+/* TEXT */
+.tentang-kanan {
+    max-width: 450px;
+}
+
+.tentang-kanan h2 {
+    font-size: 34px;
+    margin-bottom: 15px;
+}
+
+.tentang-kanan p {
+    line-height: 1.7;
+    color: #444;
+}
+
+/* ================= CARDS ================= */
+.cards {
+    display: flex;
+    justify-content: center;
+    padding: 60px;
+    gap: 30px;
+    background: linear-gradient(135deg, #a2b2c4, #cbd5e1);
+    flex-wrap: wrap;
+}
+
+/* CARD */
+.card {
+    margin-top: 20px;
+    padding: 30px;
+    background: white;
+    color: #1B263B;
+    width: 280px;
+    height: auto;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    transition: 0.4s;
+}
+
+.card h2 {
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: #1B263B;
+    color: white;
+}
+
+/* ================= SECTION PRESTASI ================= */
+.prestasi{
+    background: linear-gradient(to right,rgb(171, 189, 224), #415A77);
+    padding: 70px 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+/* ITEM */
+.item {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    background: white;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+    opacity: 1;
+    transform: translateY(50px);
+    transition: 0.6s;
+}
+
+/* IMAGE */
+.item img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* TEXT */
+.item-text h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #1B263B;
+}
+
+.item-text p {
+    color: #555;
+    line-height: 1.6;
+}
+
+/* HOVER */
+.item:hover {
+    transform: scale(1.02);
+}
+
+/* ANIMASI MUNCUL */
+.item.show {
+    opacity: 4;
+    transform: translateY(0);
+}
+
+/* ================= RESPONSIVE ================= */
+@media (max-width: 768px) {
+    .tentang {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .cards {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .item {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .item img {
+        width: 100%;
+        height: auto;
+    }
+}
